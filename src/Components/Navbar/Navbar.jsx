@@ -4,23 +4,15 @@ import './Navbar.css';
 
 const Navbar = () => {
     return(
-        <nav className='navbar'>
-        
-            <h1>Music Library</h1>
-
-            <div className="buttons">
-                <ul>
-                    <li>
-                        <a className="nav-link active" aria-current="page" href="#">Menu</a>
-                    </li>
-                    <li>
-                         <a className="nav-link" href="#">Reset</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <h1>Music Library</h1>
+                <a class="navbar-brand" href="#">Menu</a>
+                <a class="navbar-brand" href="#">Reset</a>
             </div>
-        
         </nav>
-    )  
+    )
+    
 }
 
 export default Navbar;
