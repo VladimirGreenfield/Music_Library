@@ -1,34 +1,35 @@
 import React from 'react';
+import "./MusicTable.css";
 
 
 
-
-const MusicTable = () => {
+const MusicTable = (props) => {
+    let renderedData = props.data.map((music) => {
+        return(
+            <tr>
+                <td>{music.artist}</td>
+                <td>{music.title}</td>
+                <td>{music.album}</td>
+                <td>{music.genre}</td>
+                <td>{music.releaseDate}</td>
+            </tr>   
+        )
+    });
     return (
-        <body>
-            <table className='music-table'>
-                <thead>   
-                    <tr>
-                        <th>Artist</th>
-                        <th>Song Title</th>
-                        <th>Albbum</th>
-                        <th>Genre</th>
-                        <th>Release Date</th>
-                    </tr>
-                </thead>    
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>      
-            </table>
-        </body>
-    )
+        <table className='music-table'>
+            <tr>
+                <th>Artist</th>
+                <th>Song Title</th>
+                <th>Album</th>
+                <th>Genre</th>
+                <th>Release Date</th>
+            </tr>
+           {renderedData} 
+        </table>
+    );
 
-}
+};
+
+
 
 export default MusicTable;

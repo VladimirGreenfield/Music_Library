@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        allMusic: []
+        data: []
       };
   }
     
@@ -26,7 +26,7 @@ class App extends Component {
       let response = await axios.get("http://www.devcodecampmusiclibrary.com/api/music");
       console.log(response.data)
       this.state({
-       allMusic: response.data
+       data: response.data
       })
     } 
     catch (error) {
@@ -41,13 +41,16 @@ class App extends Component {
       <div className='App'>
         <Navbar/>
         <SearchBar/>
-        <MusicTable/>
+        {/* <MusicTable/> */}
+        {this.state.data.length > 0 ? (this.state.data.map((music) => {
+            <p>{music.id}</p>  
+          })): null
+        }
+        {this.state.data.length > 0 ? <p>{this.state.data[0].artist}</p> : null}
         
       </div>
     )
   }
-
-
 
 }
  
