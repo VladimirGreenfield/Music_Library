@@ -4,6 +4,7 @@ import Navbar from './Navbar/Navbar';
 import SearchBar from './SearchBar/SearchBar';
 import axios from 'axios';
 import MusicTable from './MusicTable/MusicTable';
+import Footer from './Footer/Footer';
 
 
 
@@ -36,6 +37,7 @@ class App extends Component {
   }
 
 
+
   render() {
     console.log(this.state)
     return(
@@ -43,9 +45,8 @@ class App extends Component {
         <Navbar/>
         <SearchBar/>
         <MusicTable data={this.state.data} />
-        {/* {this.state.data.map((val,key) => {
-          return <div><p>{val.title}</p></div>;
-        })} */}
+        <Footer/>
+
       </div>
     )
   }

@@ -1,7 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,300&family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,300&family=Montserrat:wght@200&display=swap');
 
 .navbar {
-    height: 110px;
+    height: 60px;
     width: 100%;
     display: flex;
     background-color: transparent;
@@ -13,4 +13,4 @@
     font-size: 12px;
     display:inline-block;
     align-items: flex-end;
-} */
+}
