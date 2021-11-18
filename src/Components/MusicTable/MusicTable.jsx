@@ -4,7 +4,7 @@ import "./MusicTable.css";
 
 
 const MusicTable = (props) => {
-    let renderedData = props.data.map((music) => {
+    let MusicData = props.data.map((music) => {
         return(
             <tr>
                 <td>{music.artist}</td>
@@ -24,7 +24,7 @@ const MusicTable = (props) => {
                 <th>Genre</th>
                 <th>Release Date</th>
             </tr>
-           {renderedData} 
+           {MusicData} 
         </table>
     );
 

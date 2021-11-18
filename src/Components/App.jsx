@@ -15,7 +15,8 @@ class App extends Component {
         data: []
       };
   }
-    
+   
+
   componentDidMount() {
     this.fetchData();
   }
@@ -25,7 +26,7 @@ class App extends Component {
     try {
       let response = await axios.get("http://www.devcodecampmusiclibrary.com/api/music");
       console.log(response.data)
-      this.state({
+      this.setState({
        data: response.data
       })
     } 
@@ -41,13 +42,10 @@ class App extends Component {
       <div className='App'>
         <Navbar/>
         <SearchBar/>
-        {/* <MusicTable/> */}
-        {this.state.data.length > 0 ? (this.state.data.map((music) => {
-            <p>{music.id}</p>  
-          })): null
-        }
-        {this.state.data.length > 0 ? <p>{this.state.data[0].artist}</p> : null}
-        
+        <MusicTable data={this.state.data} />
+        {/* {this.state.data.map((val,key) => {
+          return <div><p>{val.title}</p></div>;
+        })} */}
       </div>
     )
   }
