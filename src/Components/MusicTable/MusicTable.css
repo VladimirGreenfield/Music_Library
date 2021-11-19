@@ -1,11 +1,16 @@
 .music-table {
     border-collapse: collapse;
-    margin: 25px 15;
+    margin: 20px 15;
     margin-left: 15px;
     font-size: 0.9em;
     min-width: 750px;
+    margin-top: 0px;
 }
 
 th {
     padding: 10px;
+}
+
+td:hover {
+    color: rgb(238, 11, 11);
 }

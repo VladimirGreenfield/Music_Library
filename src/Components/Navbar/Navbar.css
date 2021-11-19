@@ -4,8 +4,8 @@
     height: 60px;
     width: 100%;
     display: flex;
-    background-color: transparent;
-    border: black;
+    background-color: rgba(40, 163, 153, 0.158);
+    border: rgb(0, 0, 0);
 }
 
 .buttons {
@@ -13,4 +13,11 @@
     font-size: 12px;
     display:inline-block;
     align-items: flex-end;
+}
+
+h1 {
+    color: rgb(1, 2, 5);
+}
+h1:hover {
+    color: crimson;
 }
